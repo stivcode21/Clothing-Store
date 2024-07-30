@@ -1,5 +1,6 @@
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { AiOutlineClose } from "react-icons/ai";
+import ticket from '../../database/ticket.json';
 
 export const CartShop = (props) => {
 
@@ -10,19 +11,22 @@ export const CartShop = (props) => {
             {/* cart */}
             <div className="relative p-4 text-gray-300 h-full">
                 <button onClick={toggleOrder}>
-                    <AiOutlineClose className="absolute right-2 top-2 box-content p-3 text-gray-300 rounded-full bg-[#262837] text-xl" />
+                    <AiOutlineClose className="absolute right-2 top-2 box-content p-3 text-gray-300 rounded-full bg-primary text-xl" />
                 </button>
                 <h1 className="text-2xl font-semibold pb-4">Order<span className="pl-2">#100102</span></h1>
                 {/* citys */}
                 <div className="flex items-center gap-4 mb-2">
-                    <button className="bg-[#c70039] text-white py-2 px-4 rounded-xl">
-                        Medellin
+                    <button className="w-40 h-10 sm:py-4 sm:px-8 lg:py-2 lg:px-1 rounded-xl border flex justify-center items-center border-gray-500">
+                        <img src="https://www.urbantool.com/wp-content/uploads/2016/12/paypal-logo-png.png" className="object-cover w-[500px]" alt="" />
                     </button>
-                    <button className=" text-[#c70039] py-2 px-4 rounded-xl border border-gray-500">
-                        cali
+                    <button className="w-40 h-10 sm:py-4 sm:px-8 lg:py-2 lg:px-2 rounded-xl border flex justify-center items-center border-gray-500">
+                        <img src="https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/visa-512.png" className="object-cover" alt="" />
                     </button>
-                    <button className=" text-[#c70039] py-2 px-4 rounded-xl border border-gray-500">
-                        manizales
+                    <button className="w-40 h-10 sm:py-4 sm:px-8 lg:py-2 lg:px-2 rounded-xl border flex justify-center items-center border-gray-500">
+                        <img src="https://seeklogo.com/images/P/pse-logo-4AE3A79534-seeklogo.com.png" className="object-cover w-[80px] lg:w-full" alt="" />
+                    </button>
+                    <button className="w-40 h-10 sm:py-4 sm:px-8 lg:py-2 lg:px-2 rounded-xl border flex justify-center items-center border-gray-500">
+                        <img src="https://static-00.iconduck.com/assets.00/mastercard-icon-2048x1225-3kb6axel.png" className="object-cover w-[50px] lg:w-[500px]" alt="" />
                     </button>
                 </div>
 
@@ -38,22 +42,23 @@ export const CartShop = (props) => {
 
                 <div className="h-[310px] overflow-y-auto">
                     {/*container*/}
-
-                    <div className=" bg-[#1f1d2b] p-6 sm:p-4 rounded-xl border-b border-b-[#6e0321] mb-4">
+                    <div className=" bg-secondary p-6 sm:p-4 rounded-xl border-b border-b-[#6e0321] mb-4">
                         {/* description */}
                         <div className="flex justify-between mb-3">
+
                             <div className=" flex items-center gap-3">
-                                <img src="https://i.pinimg.com/474x/f5/b1/21/f5b12124ec01dc731c73fac49840a64d.jpg"
+                                <img src={ticket.imgPrevie}
                                     className="w-10 h-10 object-cover rounded-full" />
                                 <div>
-                                    <h5 className="text-sm">nike black white</h5>
-                                    <p className="text-sm text-gray-500">$79.99</p>
+                                    <h5 className="text-sm text-white">{ticket.marca}</h5>
+                                    <p className="text-sm text-gray-500">{ticket.precie}</p>
                                 </div>
                             </div>
 
+
                             <div className="flex items-center gap-5 text-center">
                                 {/* Qty */}
-                                <div className="py-2 px-4 text-lg bg-[#262837] rounded-lg">
+                                <div className="py-2 px-4 text-lg bg-primary rounded-lg">
                                     <span>2</span>
                                 </div>
                                 {/* Price */}
@@ -63,148 +68,15 @@ export const CartShop = (props) => {
                             </div>
                         </div>
 
-                        {/* note */}
+                        {/* imput note */}
                         <div className="flex items-center gap-4">
                             <form className="w-full">
                                 <input type="text"
-                                    className="bg-[#262837] text-md w-full py-2 px-4 rounded-lg outline-none"
-                                    placeholder="Order note..."
-                                />
+                                    className="bg-primary text-md w-full py-2 px-4 rounded-lg outline-none"
+                                    placeholder="Order note..." />
                             </form>
                             <div className="mr-1">
-                                <button className="text-center text-[#c70039] p-2 border border-[#c70039] rounded-lg box-content">
-                                    <RiDeleteBin6Line className="text-xl" />
-                                </button>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    {/*container product*/}
-                    <div className=" bg-[#1f1d2b] p-6 sm:p-4 rounded-xl border-b border-b-[#6e0321] mb-4">
-
-                        {/* description */}
-                        <div className="flex justify-between mb-3">
-                            <div className=" flex items-center gap-3">
-                                <img src="https://i.pinimg.com/474x/f5/b1/21/f5b12124ec01dc731c73fac49840a64d.jpg"
-                                    className="w-10 h-10 object-cover rounded-full" />
-                                <div>
-                                    <h5 className="text-sm">nike black white</h5>
-                                    <p className="text-sm text-gray-500">$79.99</p>
-                                </div>
-                            </div>
-
-                            {/* tags */}
-                            <div className="flex items-center gap-5 text-center">
-                                {/* Qty */}
-                                <div className="py-2 px-4 text-lg bg-[#262837] rounded-lg">
-                                    <span>2</span>
-                                </div>
-                                {/* Price */}
-                                <div>
-                                    <span>$79.99</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* note */}
-                        <div className="flex items-center gap-4">
-                            <form className="w-full">
-                                <input type="text"
-                                    className="bg-[#262837] text-md w-full py-2 px-4 rounded-lg outline-none"
-                                    placeholder="Order note..."
-                                />
-                            </form>
-                            <div className="mr-1">
-                                <button className="text-center text-[#c70039] p-2 border border-[#c70039] rounded-lg box-content">
-                                    <RiDeleteBin6Line className="text-xl" />
-                                </button>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    {/*container product*/}
-                    <div className=" bg-[#1f1d2b] p-6 sm:p-4 rounded-xl border-b border-b-[#6e0321] mb-4">
-
-                        {/* description */}
-                        <div className="flex justify-between mb-3">
-                            <div className=" flex items-center gap-3">
-                                <img src="https://i.pinimg.com/474x/f5/b1/21/f5b12124ec01dc731c73fac49840a64d.jpg"
-                                    className="w-10 h-10 object-cover rounded-full" />
-                                <div>
-                                    <h5 className="text-sm">nike black white</h5>
-                                    <p className="text-sm text-gray-500">$79.99</p>
-                                </div>
-                            </div>
-
-                            {/* tags */}
-                            <div className="flex items-center gap-5 text-center">
-                                {/* Qty */}
-                                <div className="py-2 px-4 text-lg bg-[#262837] rounded-lg">
-                                    <span>2</span>
-                                </div>
-                                {/* Price */}
-                                <div>
-                                    <span>$79.99</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* note */}
-                        <div className="flex items-center gap-4">
-                            <form className="w-full">
-                                <input type="text"
-                                    className="bg-[#262837] text-md w-full py-2 px-4 rounded-lg outline-none"
-                                    placeholder="Order note..."
-                                />
-                            </form>
-                            <div className="mr-1">
-                                <button className="text-center text-[#c70039] p-2 border border-[#c70039] rounded-lg box-content">
-                                    <RiDeleteBin6Line className="text-xl" />
-                                </button>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    {/*container product*/}
-                    <div className=" bg-[#1f1d2b] p-6 sm:p-4 rounded-xl border-b border-b-[#6e0321] mb-4">
-
-                        {/* description */}
-                        <div className="flex justify-between mb-3">
-                            <div className=" flex items-center gap-3">
-                                <img src="https://i.pinimg.com/474x/f5/b1/21/f5b12124ec01dc731c73fac49840a64d.jpg"
-                                    className="w-10 h-10 object-cover rounded-full" />
-                                <div>
-                                    <h5 className="text-sm">nike black white</h5>
-                                    <p className="text-sm text-gray-500">$79.99</p>
-                                </div>
-                            </div>
-
-                            {/* tags */}
-                            <div className="flex items-center gap-5 text-center">
-                                {/* Qty */}
-                                <div className="py-2 px-4 text-lg bg-[#262837] rounded-lg">
-                                    <span>2</span>
-                                </div>
-                                {/* Price */}
-                                <div>
-                                    <span>$79.99</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* note */}
-                        <div className="flex items-center gap-4">
-                            <form className="w-full">
-                                <input type="text"
-                                    className="bg-[#262837] text-md w-full py-2 px-4 rounded-lg outline-none"
-                                    placeholder="Order note..."
-                                />
-                            </form>
-                            <div className="mr-1">
-                                <button className="text-center text-[#c70039] p-2 border border-[#c70039] rounded-lg box-content">
+                                <button className="text-center text-accent p-2 border border-accent rounded-lg box-content">
                                     <RiDeleteBin6Line className="text-xl" />
                                 </button>
                             </div>
@@ -216,8 +88,8 @@ export const CartShop = (props) => {
 
 
                 {/* submit payment */}
-                <div className="bg-[#1f1d2b] sticky w-full bottom-0 left-0 py-3">
-                    <div className="bg-[#262837] p-4 rounded-xl">
+                <div className="bg-secondary sticky w-full bottom-0 left-0 py-3">
+                    <div className="bg-primary p-4 rounded-xl">
                         <div className="flex items-center justify-between mb-2">
                             <span className="text-gray-400">Discount</span>
                             <span>$0</span>
@@ -227,7 +99,7 @@ export const CartShop = (props) => {
                             <span>$79.99</span>
                         </div>
                         <div>
-                            <button className="bg-[#c70039] w-full py-2 px-4 rounded-lg">
+                            <button className="bg-accent w-full py-2 px-4 rounded-lg">
                                 Continue to payment
                             </button>
                         </div>
