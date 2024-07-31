@@ -10,7 +10,7 @@ const SidebarMobile = (props) => {
     return (
         <>
             {/* sidebar Mobile */}
-            <nav className="bg-[#1f1d2b] lg:hidden fixed w-full bottom-0 left-0 text-3xl text-gray-500 py-4 px-10 flex items-center justify-between rounded-tl-xl rounded-tr-xl">
+            <nav className="bg-secondary lg:hidden fixed w-full bottom-0 left-0 text-3xl text-gray-500 py-4 px-10 flex items-center justify-between rounded-tl-xl rounded-tr-xl">
                 <button className='hover:text-white'>
                     <PiUserCircleDashedLight />
                 </button>

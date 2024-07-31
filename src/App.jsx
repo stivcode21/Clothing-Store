@@ -21,18 +21,18 @@ function App() {
   }
 
   return (
-    <div className="bg-[#262837] w-full min-h-screen">
+    <div className="bg-primary w-full min-h-screen">
       {/* sidebar */}
-      <Sidebar showMenu={showMenu} toggleOrder={toggleOrder} />
+      <Sidebar showMenu={showMenu} showOrder={showOrder} toggleOrder={toggleOrder} />
       {/* sidebar Mobile */}
       <SidebarMobile showMenu={showMenu} toggleOrder={toggleOrder} toggleMenu={toggleMenu} />
 
-      <main className="lg:pl-[90px] grid grid-cols-1 lg:grid-cols-8 pb-10 lg:pb-0">
+      <main className="lg:pl-[70px] grid grid-cols-1 lg:grid-cols-8 pb-10 lg:pb-0">
         {/* main content */}
         <MainContent showOrder={showOrder} />
 
         {/* cart shop */}
-        <section className={`bg-[#1f1d2b] md:col-span-2 fixed lg:right-0 lg:w-[350px] top-0 w-full h-full transition-all
+        <section className={`bg-secondary md:col-span-2 fixed lg:right-0 lg:w-[350px] top-0 w-full h-full transition-all border-l border-l-gray-800
           ${showOrder ? "right-0" : "-right-full"} ${showOrder ? "lg:col-span-2" : "hidden"}`}>
           {/* cart */}
           <CartShop toggleOrder={toggleOrder} />

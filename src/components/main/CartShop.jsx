@@ -16,17 +16,20 @@ export const CartShop = (props) => {
                 <h1 className="text-2xl font-semibold pb-4">Order<span className="pl-2">#100102</span></h1>
                 {/* citys */}
                 <div className="flex items-center gap-4 mb-2">
-                    <button className="w-40 h-10 sm:py-4 sm:px-8 lg:py-2 lg:px-1 rounded-xl border flex justify-center items-center border-gray-500">
-                        <img src="https://www.urbantool.com/wp-content/uploads/2016/12/paypal-logo-png.png" className="object-cover w-[500px]" alt="" />
+                    <button className="w-40 h-10 sm:py-4 sm:px-8 lg:py-2 lg:px-1 rounded-xl border flex justify-center items-center border-gray-500 hover:bg-gray-300 transition-all">
+                        <img src="https://www.urbantool.com/wp-content/uploads/2016/12/paypal-logo-png.png" className="object-cover w-[60px] lg:w-[400px]" alt="" />
                     </button>
-                    <button className="w-40 h-10 sm:py-4 sm:px-8 lg:py-2 lg:px-2 rounded-xl border flex justify-center items-center border-gray-500">
-                        <img src="https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/visa-512.png" className="object-cover" alt="" />
+                    <button className="w-40 h-10 sm:py-4 sm:px-8 lg:py-2 lg:px-2 rounded-xl border flex justify-center items-center border-gray-500 hover:bg-gray-300 transition-all">
+                        <img src="https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/visa-512.png" className="object-cover w-[60px] lg:w-[400px]" alt="" />
                     </button>
-                    <button className="w-40 h-10 sm:py-4 sm:px-8 lg:py-2 lg:px-2 rounded-xl border flex justify-center items-center border-gray-500">
-                        <img src="https://seeklogo.com/images/P/pse-logo-4AE3A79534-seeklogo.com.png" className="object-cover w-[80px] lg:w-full" alt="" />
+                    <button className="w-40 h-10 sm:py-4 sm:px-8 lg:py-2 lg:px-1 rounded-xl border flex justify-center items-center border-gray-500 hover:bg-gray-300 transition-all">
+                        <img src="https://seeklogo.com/images/P/pse-logo-4AE3A79534-seeklogo.com.png" className="object-cover w-[50px] lg:w-[500px]" alt="" />
                     </button>
-                    <button className="w-40 h-10 sm:py-4 sm:px-8 lg:py-2 lg:px-2 rounded-xl border flex justify-center items-center border-gray-500">
-                        <img src="https://static-00.iconduck.com/assets.00/mastercard-icon-2048x1225-3kb6axel.png" className="object-cover w-[50px] lg:w-[500px]" alt="" />
+                    <button className="w-40 h-10 sm:py-4 sm:px-8 lg:py-2 lg:px-2 rounded-xl border flex justify-center items-center border-gray-500 hover:bg-gray-300 transition-all">
+                        <img src="https://static-00.iconduck.com/assets.00/mastercard-icon-2048x1225-3kb6axel.png" className="object-cover w-[40px] lg:w-[400px]" alt="" />
+                    </button>
+                    <button className="w-40 h-10 sm:py-4 sm:px-6 lg:py-2 lg:px-2 rounded-xl border flex justify-center items-center border-gray-500 hover:bg-gray-300 transition-all">
+                        <img src="https://i.pinimg.com/originals/b8/cd/c1/b8cdc1ad498fe080bc21bb5a03c24f83.png" className="object-cover w-[70px] sm:w-[600px]" alt="" />
                     </button>
                 </div>
 
@@ -42,7 +45,7 @@ export const CartShop = (props) => {
 
                 <div className="h-[310px] overflow-y-auto">
                     {/*container*/}
-                    <div className=" bg-secondary p-6 sm:p-4 rounded-xl border-b border-b-[#6e0321] mb-4">
+                    <div className=" bg-secondary p-6 sm:p-4 rounded-xl border-y border-y-gray-900 mb-4">
                         {/* description */}
                         <div className="flex justify-between mb-3">
 
@@ -58,7 +61,7 @@ export const CartShop = (props) => {
 
                             <div className="flex items-center gap-5 text-center">
                                 {/* Qty */}
-                                <div className="py-2 px-4 text-lg bg-primary rounded-lg">
+                                <div className="py-2 px-4 text-lg bg-primary rounded-lg border border-gray-900">
                                     <span>2</span>
                                 </div>
                                 {/* Price */}
@@ -72,11 +75,11 @@ export const CartShop = (props) => {
                         <div className="flex items-center gap-4">
                             <form className="w-full">
                                 <input type="text"
-                                    className="bg-primary text-md w-full py-2 px-4 rounded-lg outline-none"
+                                    className="bg-primary text-md w-full py-2 px-4 rounded-lg outline-none border-y border-y-accent"
                                     placeholder="Order note..." />
                             </form>
                             <div className="mr-1">
-                                <button className="text-center text-accent p-2 border border-accent rounded-lg box-content">
+                                <button className="text-center text-red-600 p-2 border border-red-600 rounded-lg box-content">
                                     <RiDeleteBin6Line className="text-xl" />
                                 </button>
                             </div>
