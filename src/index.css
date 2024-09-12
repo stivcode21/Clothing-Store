@@ -3,9 +3,10 @@
 @tailwind utilities;
 
 :root {
-    --bg-main: #000;
-    --bg-two: #000;
-    --color-main: #027b41;
+  --bg-main: #ffffff;
+  --bg-two: #f0f0f0;
+  --color-main: #00aeff;
+  --color-text: #000;
 }
 
 /*

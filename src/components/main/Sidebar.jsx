@@ -10,13 +10,13 @@ const Sidebar = (props) => {
     const { showMenu, toggleOrder, showOrder } = props;
 
     return (
-        <div className={`bg-secondary fixed lg:left-0 top-0 w-[80px] h-full flex flex-col justify-between py-4 rounded-tr-xl rounded-br-xl z-50 transition-all border-r border-r-gray-800
+        <div className={`bg-secondary fixed lg:left-0 top-0 w-[80px] h-full flex flex-col justify-between py-4 rounded-tr-xl rounded-br-xl z-50 transition-all shadow-2xl  border-r-gray-800
         ${showMenu ? "left-0" : "-left-full"} `
         }>
             <div >
                 <ul>
                     <li className="pb-4 flex justify-center">
-                        <IoStorefrontOutline className="text-5xl text-white cursor-pointer" />
+                        <IoStorefrontOutline className="text-5xl text-text cursor-pointer" />
                     </li>
                     <li className="bg-primary p-3 rounded-tl-xl rounded-bl-xl">
                         <a href="#" className="bg-accent p-3.5 flex justify-center rounded-lg">
@@ -24,9 +24,11 @@ const Sidebar = (props) => {
                         </a>
                     </li>
 
-                    <li className="hover:bg-primary p-3 rounded-tl-xl rounded-bl-xl group transition-colors duration-200 ease-in">
+                    <li className={`hover:bg-primary p-3 rounded-tl-xl rounded-bl-xl group transition-colors duration-200 ease-in
+                        ${showOrder ? "bg-primary" : "bg-secondary"}`
+                    }>
                         <a href="#" onClick={toggleOrder} className={`group-hover:bg-accent p-3.5 flex justify-center rounded-lg transition-colors duration-200 ease-in
-                            ${showOrder ? "bg-accent text-white" : "bg-primary text-accent"}`
+                            ${showOrder ? "bg-accent text-white" : "bg-secondary text-accent"}`
                         }>
                             <IoCartOutline className=" group-hover:text-white text-2xl transition-colors duration-200 ease-in" />
                         </a>

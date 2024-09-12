@@ -27,7 +27,7 @@ function App() {
       {/* sidebar Mobile */}
       <SidebarMobile showMenu={showMenu} toggleOrder={toggleOrder} toggleMenu={toggleMenu} />
 
-      <main className="lg:pl-[70px] grid grid-cols-1 lg:grid-cols-8 pb-10 lg:pb-0">
+      <main className="lg:pl-[70px] grid grid-cols-1 lg:grid-cols-8 xl:grid-cols-8 pb-10 lg:pb-0">
         {/* main content */}
         <MainContent showOrder={showOrder} />
 

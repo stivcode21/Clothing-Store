@@ -14,21 +14,21 @@ const MainContent = (props) => {
                 </header>
                 {/* title content */}
                 <div>
-                    <h2 className="text-xl text-gray-300 mb-10 md:mb-8">Set Menu</h2>
+                    <h2 className="text-xl text-text font-semibold mb-10 md:mb-8">Set Menu</h2>
                 </div>
 
                 {/* content */}
-                <div className="p-5 xl:pb-0 grid grid-cols-2 gap-12 sm:gap-14 sm:grid-cols-3 xl:grid-cols-4">
+                <div className="pb-10 xl:pb-0 grid grid-cols-2 gap-6 sm:gap-14 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
 
                     {/* cards */}
                     {data.map(product => (
-                        <div className="bg-secondary p-0 md:p-10 xl:p-5 rounded-xl flex flex-col gap-1 text-gray-300 mb-4" >
+                        <div className="bg-secondary md:w-full m-auto shadow-xl px-5 md:px-5 py-2 xl:px-5 rounded-xl flex flex-col gap-1 text-gray-300 mb-4 box-border" >
                             <img src={product.imgPrevie}
-                                className="w-full xl: h-40 object-cover bg-center m-auto -mt-10 shadow-2xl" alt="set-1" />
-                            <h3 className="text-gray-600 font-bold text-start mt-4">{product.marca}</h3>
-                            <p className="text-lg text-gray-400">{product.name}</p>
-                            <span className="text-3xl">{product.precie}</span>
-                            <button className="text-white mt-5 py-3 px-4 bg-accent rounded-xl w-full">add to cart</button>
+                                className="w-full h-40 object-cover shadow-md rounded-t-xl rounded-b-xl bg-center" alt="set-1" />
+                            <h3 className="text-text font-bold text-start mt-4">{product.marca}</h3>
+                            <p className="text-md text-gray-800">{product.name}</p>
+                            <span className="text-3xl text-text">{product.precie}</span>
+                            <button className="text-white mt-5 py-3 px-4 bg-accent rounded-xl w-full hover:scale-110">add to cart</button>
                         </div>
                     ))}
 
